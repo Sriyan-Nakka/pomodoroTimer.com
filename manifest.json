@@ -1,0 +1,55 @@
+{
+  "name": "Pomodoro Timer",
+  "short_name": "Pomo Timer",
+  "description": "A Pomodoro Timer made to improve your productivity and focus.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#8f7b3b",
+  "theme_color": "#6e664d",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "Favicons/512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "Favicons/192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Favicons/16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "Favicons/20x20.png",
+      "type": "image/png",
+      "sizes": "20x20"
+    },
+    {
+      "src": "Favicons/24x24.png",
+      "type": "image/png",
+      "sizes": "24x24"
+    },
+    {
+      "src": "Favicons/32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "Images/screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "296x347"
+    },
+    {
+      "src": "Images/screenshot-desktop.png",
+      "type": "image/png",
+      "sizes": "703x303",
+      "form_factor": "wide"
+    }
+  ]
+}
