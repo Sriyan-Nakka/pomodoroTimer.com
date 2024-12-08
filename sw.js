@@ -1,14 +1,12 @@
-const staticCacheName = "site-static";
-const assets = [
-          "/","/index.html","/script.js",
-          "/Audio/workCycleComplete.wav","/Audio/breakCycleComplete.mp3",
-          "/Fonts/parkinsans-webfont.woff","/Fonts/parkinsans-webfont.woff2",
-        ];
-
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open("static").then(cache => {
-      return cache.addAll(assets);
+      cache.add('/PomodoroTimer/index.html');
+      cache.add('/PomodoroTimer/script.js');
+      cache.add('/PomodoroTimer/Audio/workCycleComplete.wav');
+      cache.add('/PomodoroTimer/Audio/breakCycleComplete.mp3');
+      cache.add('/PomodoroTimer/Fonts/parkinsans-webfont.woff');
+      cache.add('/PomodoroTimer/Fonts/parkinsans-webfont.woff2');
     })
   );
 });
