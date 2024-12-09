@@ -1,12 +1,9 @@
-self.addEventListener("install", (e) => {
+const assets = ['/index.html', '/script.js', '/audio/breakCycleComplete.mp3', '/audio/workCycleComplete.wav', '/fonts/parkinsans-webfont.woff', '/fonts/parkinsans-webfont.woff2'];
+
+self.addEventListener("install", e => {
   e.waitUntil(
     caches.open("static").then(cache => {
-      cache.addAll(['/PomodoroTimer/index.html']);
-      cache.addAll(['/PomodoroTimer/script.js']);
-      cache.addAll(['/PomodoroTimer/Audio/workCycleComplete.wav']);
-      cache.addAll(['/PomodoroTimer/Audio/breakCycleComplete.mp3']);
-      cache.addAll(['/PomodoroTimer/Fonts/parkinsans-webfont.woff']);
-      cache.addAll(['/PomodoroTimer/Fonts/parkinsans-webfont.woff2']);
+      cache.addAll(assets);
     })
   );
 });
