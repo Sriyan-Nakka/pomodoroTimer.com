@@ -3,7 +3,7 @@ const assets = ['/index.html', '/script.js', '/audio/breakCycleComplete.mp3', '/
 self.addEventListener("install", e => {
   e.waitUntil(
     caches.open("static").then(cache => {
-      cache.addAll(assets);
+      return cache.addAll(assets);
     })
   );
 });
