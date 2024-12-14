@@ -17,7 +17,11 @@ self.addEventListener("install", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  console.log(`Intercepting fetch request for: ${e.url}`);
+  e.respondWith(
+    caches.match(e.request).then((cacheRes) => {
+      return cacheRes || fetch(e.request);
+    })
+  );
 });
 
 self.addEventListener("activate", (e) => {
