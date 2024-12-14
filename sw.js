@@ -1,9 +1,22 @@
-const assets = ['/index.html', '/script.js', '/audio/breakCycleComplete.mp3', '/audio/workCycleComplete.wav', '/fonts/parkinsans-webfont.woff', '/fonts/parkinsans-webfont.woff2'];
+// const assets = [
+//   "/index.html",
+//   "/script.js",
+//   "/audio/breakCycleComplete.mp3",
+//   "/audio/workCycleComplete.wav",
+//   "/fonts/parkinsans-webfont.woff",
+//   "/fonts/parkinsans-webfont.woff2",
+// ];
+const cacheName = "cacheStatic";
 
-self.addEventListener("install", e => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open("static").then(cache => {
-      return cache.addAll(assets);
+    caches.open(cacheName).then(cache => {
+      cache.addAll(["/index.html"]);
+      cache.addAll(["/script.js"]);
+      // cache.addAll(["/audio/breakCycleComplete.mp3"]);
+      // cache.addAll(["/audio/workCycleComplete.wav"]);
+      // cache.addAll(["/fonts/parkinsans-webfont.woff"]);
+      // cache.addAll(["/fonts/parkinsans-webfont.woff2"]);
     })
   );
 });
